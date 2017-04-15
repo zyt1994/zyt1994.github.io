@@ -247,7 +247,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/09/input 实时监听/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/10/阻止冒泡，默认事件/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="邹怡婷">
@@ -269,8 +269,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/09/input 实时监听/" itemprop="url">
-                  input 实时监听
+                <a class="post-title-link" href="/2017/04/10/阻止冒泡，默认事件/" itemprop="url">
+                  阻止冒泡，默认事件
                 </a>
               
             
@@ -286,8 +286,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-09T18:37:00+08:00">
-                2017-04-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-10T22:48:48+08:00">
+                2017-04-10
               </time>
             
 
@@ -324,8 +324,8 @@
       
         
           
-            <p><a href="http://www.cnblogs.com/zijian6/p/5767026.html" target="_blank" rel="external">Jquery实时监听input value</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;title&gt;Document&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body id=&quot;lia-body&quot;&gt;</div><div class="line">    &lt;div class=&quot;lia-content&quot;&gt;</div><div class="line">        &lt;div class=&quot;inputwrapper&quot;&gt;</div><div class="line">            &lt;label&gt;&lt;span&gt;姓名：&lt;/span&gt;&lt;input type=&quot;text&quot; name=&quot;fullname&quot;&gt;&lt;/label&gt;</div><div class="line">            &lt;div class=&quot;result&quot;&gt;&lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;script src=&quot;http://apps.bdimg.com/libs/jquery/1.11.3/jquery.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">        $(function()&#123;</div><div class="line">            var $inputwrapper = $(&apos;#lia-body .lia-content .inputwrapper&apos;);</div><div class="line">            $inputwrapper.find(&apos;input&apos;).on(&apos;input propertychange&apos;,function()&#123;</div><div class="line">                var result = $(this).val();</div><div class="line">                console.log(result);</div><div class="line">                $inputwrapper.find(&apos;.result&apos;).html(result);</div><div class="line">            &#125;);</div><div class="line">        &#125;)</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
-<p>onchange触发事件必须满足两个条件：1）当前对象属性改变，并且是由键盘或鼠标事件激发的（脚本触发无效）2）当前对象失去焦点(onblur)；onpropertychange<br>只要当前对象属性发生改变，都会触发事件，但是它是IE专属的；<br>oninput是onpropertychange的非IE版本，支持firefox和opera等浏览器<br>但不同的是，它绑定于对象时，并非该对象所有属性改变都能触发事件，只有在对象的value值发生改变时才会生效。<br>这里我们用来监听input value的改变再好不过了。</p>
+            <p>JS停止冒泡<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function myfn(e)&#123;</div><div class="line">  window.event?window.event.cancelBubble = true : e.stopPropagation();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>JS阻止默认行为<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function myfn(e)&#123;</div><div class="line">  window.event?window.event.returnValue = false : e.preventDefault();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
           
         
@@ -369,7 +369,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/09/webstorm快捷方式/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/10/让未知大小的盒子居中/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="邹怡婷">
@@ -391,8 +391,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/09/webstorm快捷方式/" itemprop="url">
-                  webstorm快捷方式
+                <a class="post-title-link" href="/2017/04/10/让未知大小的盒子居中/" itemprop="url">
+                  让未知大小的盒子居中
                 </a>
               
             
@@ -408,8 +408,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-09T18:36:53+08:00">
-                2017-04-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-10T22:48:48+08:00">
+                2017-04-10
               </time>
             
 
@@ -446,7 +446,10 @@
       
         
           
-            <p><img src="http://upload-images.jianshu.io/upload_images/3202149-8f9c8ee1362f40e5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+            <h5 id="方法1："><a href="#方法1：" class="headerlink" title="方法1："></a>方法1：</h5><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">#box1 &#123;            </div><div class="line">    position: relative;            </div><div class="line">    width: 600px;</div><div class="line">    height: 600px;</div><div class="line">    background: pink;</div><div class="line">&#125;</div><div class="line">#box2 &#123;</div><div class="line">    position: absolute;</div><div class="line">    width: 300px;</div><div class="line">    height: 300px;</div><div class="line">    background: yellowgreen;</div><div class="line">    top: 0;</div><div class="line">    left: 0;</div><div class="line">    bottom: 0;</div><div class="line">    right: 0;</div><div class="line">    margin: auto;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>html:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">&lt;div id=&quot;box1&quot;&gt;</div><div class="line">    &lt;div id=&quot;box2&quot;&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure>
+<h5 id="方法2："><a href="#方法2：" class="headerlink" title="方法2："></a>方法2：</h5><p>使用CSS3属性<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">#box2 &#123;</div><div class="line">     position: absolute;</div><div class="line">     width: 300px;</div><div class="line">     height: 300px;</div><div class="line">     background: yellowgreen;</div><div class="line">     top: 50%;</div><div class="line">     left: 50%;</div><div class="line">     transform: translate(-50% -50%);</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
 
           
         
@@ -490,7 +493,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/09/最大公约数和最小公倍数/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/10/清浮动/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="邹怡婷">
@@ -512,265 +515,7 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/09/最大公约数和最小公倍数/" itemprop="url">
-                  最大公约数和最小公倍数
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-09T18:36:52+08:00">
-                2017-04-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h5 id="1）最大公约数（最大公因数）就是几个数公有的因数中最大的一个"><a href="#1）最大公约数（最大公因数）就是几个数公有的因数中最大的一个" class="headerlink" title="1）最大公约数（最大公因数）就是几个数公有的因数中最大的一个."></a>1）最大公约数（最大公因数）就是几个数公有的因数中最大的一个.</h5><p>例12与18<br>12的因数有1,12,2,6,3,4<br>18的因数有1,18,2,9,6,3<br>公有的因数有1,2,3,6,<br>所以6就是12与18的最大公约数.</p>
-<h5 id="2）最小公倍数就是几个数公有的倍数中最小的一个"><a href="#2）最小公倍数就是几个数公有的倍数中最小的一个" class="headerlink" title="2）最小公倍数就是几个数公有的倍数中最小的一个."></a>2）最小公倍数就是几个数公有的倍数中最小的一个.</h5><p>例4和6 4的倍数有4,8,12,16,20,24,……<br>6的倍数有6,12,18,24,……<br>4和6 公倍数 12,18……,<br>所以4和6的最小公倍数是12 .</p>
-<h4 id="例：求m和n的最大公约数"><a href="#例：求m和n的最大公约数" class="headerlink" title="例：求m和n的最大公约数"></a>例：求m和n的最大公约数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var t=0;</div><div class="line">if(m&lt;n)&#123;</div><div class="line">    m = n;</div><div class="line">&#125;</div><div class="line">t = m%n;</div><div class="line">if(t==0)&#123;</div><div class="line">    alert(n+&quot;为最大公约数&quot;);</div><div class="line">&#125;else&#123;</div><div class="line">    m = n;</div><div class="line">    n =m - n;</div><div class="line">    t = m%n;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>s1:输入m,n<br>s2:如m&lt;n，则对调m和n的值,否则转s3<br>s3:t=m%n;<br>s4:如t=0;则n为最大公约数，否则转s5<br>s5:m=n<br>s6:n=m-n</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/09/cookie/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="邹怡婷">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zoū">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/09/cookie/" itemprop="url">
-                  cookie
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-09T18:36:33+08:00">
-                2017-04-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>存储数据，当用户访问了网站（网页）的时候，我们就可以通过cookie来向访问者电脑里存储数据（相对来说容量小一点——4kb）,一般用来存储一些用户的信息和简单的数据。</p>
-<h5 id="cookie特点："><a href="#cookie特点：" class="headerlink" title="cookie特点："></a>cookie特点：</h5><pre><code>1. 不同的浏览器存放的cookie位置不一样，也是不能通用的。
-2. cookie的存储是以域名的形式来区分的。
-3. cookie的数据可以设置名字。
-4. 一个域名下所存放的cookie的个数也是有限制的。（不同浏览器存放的个数不同）
-5. 每一个cookie存放的内容大小也是有限制的（根据浏览器不同而不同）一般情况下4KB。
-</code></pre><h5 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h5><pre><code>1. cookie是浏览器提供的一种机制，它是将document对象的cookie属性提供给JavaScript，
-   然后由js来进行控制，而并不是js本身的性质。
-2. cookie存在于用户硬盘的一个文件，这个文件对应 一个域名，当浏览器再次访问这个域名时，
-   便使这个cookie可用，因此cookie可以跨越一个域名下的多个网页，但是不能跨越的多个域名使用
-3. 如果要一次存储多个名/值时，可以使用  分号+空格  隔开。
-</code></pre><p>Chrome默认禁止设置本地的cookie（如果直接file://…..的形式打开浏览器的话看不到），webstorm等一些软件默认内置了一个本地服务器（127.0.0.1）这样就可在chrome上查询到设置的cookie。</p>
-<h5 id="用法："><a href="#用法：" class="headerlink" title="用法："></a>用法：</h5><pre><code>document.cookie = &quot;名字=值&quot;
-</code></pre><h5 id="例："><a href="#例：" class="headerlink" title="例："></a>例：</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function setCooie(key,value,time)&#123;   //time   过期时间</div><div class="line">    var newDate = new Date();</div><div class="line">    newDate.setDate(newDate.getDate()+time);</div><div class="line">    document.cookie = key+<span class="string">"="</span>+encodeURI(value)+<span class="string">";expires="</span>+newDate.toGMTString()</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/09/清浮动/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="邹怡婷">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zoū">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/09/清浮动/" itemprop="url">
+                <a class="post-title-link" href="/2017/04/10/清浮动/" itemprop="url">
                   清浮动
                 </a>
               
@@ -787,8 +532,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-09T18:36:02+08:00">
-                2017-04-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-10T22:48:48+08:00">
+                2017-04-10
               </time>
             
 
@@ -881,7 +626,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/09/兼容性问题/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/10/最大公约数和最小公倍数/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="邹怡婷">
@@ -903,7 +648,131 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/09/兼容性问题/" itemprop="url">
+                <a class="post-title-link" href="/2017/04/10/最大公约数和最小公倍数/" itemprop="url">
+                  最大公约数和最小公倍数
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-10T22:48:48+08:00">
+                2017-04-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="1）最大公约数（最大公因数）就是几个数公有的因数中最大的一个"><a href="#1）最大公约数（最大公因数）就是几个数公有的因数中最大的一个" class="headerlink" title="1）最大公约数（最大公因数）就是几个数公有的因数中最大的一个."></a>1）最大公约数（最大公因数）就是几个数公有的因数中最大的一个.</h5><p>例12与18<br>12的因数有1,12,2,6,3,4<br>18的因数有1,18,2,9,6,3<br>公有的因数有1,2,3,6,<br>所以6就是12与18的最大公约数.</p>
+<h5 id="2）最小公倍数就是几个数公有的倍数中最小的一个"><a href="#2）最小公倍数就是几个数公有的倍数中最小的一个" class="headerlink" title="2）最小公倍数就是几个数公有的倍数中最小的一个."></a>2）最小公倍数就是几个数公有的倍数中最小的一个.</h5><p>例4和6 4的倍数有4,8,12,16,20,24,……<br>6的倍数有6,12,18,24,……<br>4和6 公倍数 12,18……,<br>所以4和6的最小公倍数是12 .</p>
+<h4 id="例：求m和n的最大公约数"><a href="#例：求m和n的最大公约数" class="headerlink" title="例：求m和n的最大公约数"></a>例：求m和n的最大公约数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var t=0;</div><div class="line">if(m&lt;n)&#123;</div><div class="line">    m = n;</div><div class="line">&#125;</div><div class="line">t = m%n;</div><div class="line">if(t==0)&#123;</div><div class="line">    alert(n+&quot;为最大公约数&quot;);</div><div class="line">&#125;else&#123;</div><div class="line">    m = n;</div><div class="line">    n =m - n;</div><div class="line">    t = m%n;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>s1:输入m,n<br>s2:如m&lt;n，则对调m和n的值,否则转s3<br>s3:t=m%n;<br>s4:如t=0;则n为最大公约数，否则转s5<br>s5:m=n<br>s6:n=m-n</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/10/兼容性问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="邹怡婷">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zoū">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/10/兼容性问题/" itemprop="url">
                   兼容性问题
                 </a>
               
@@ -920,8 +789,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-09T18:36:02+08:00">
-                2017-04-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-10T22:48:48+08:00">
+                2017-04-10
               </time>
             
 
@@ -1049,7 +918,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/09/Vue-cli安装/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/10/webstorm快捷方式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="邹怡婷">
@@ -1071,7 +940,128 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/09/Vue-cli安装/" itemprop="url">
+                <a class="post-title-link" href="/2017/04/10/webstorm快捷方式/" itemprop="url">
+                  webstorm快捷方式
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-10T22:48:48+08:00">
+                2017-04-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="http://upload-images.jianshu.io/upload_images/3202149-8f9c8ee1362f40e5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/10/Vue-cli安装/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="邹怡婷">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zoū">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/10/Vue-cli安装/" itemprop="url">
                   Vue-cli安装
                 </a>
               
@@ -1088,8 +1078,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-09T18:36:00+08:00">
-                2017-04-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-10T22:48:48+08:00">
+                2017-04-10
               </time>
             
 
@@ -1179,7 +1169,7 @@ $ vue list 查看可以用哪些模板
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/09/createElement与createDocumentFragment的区别/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/10/Nodejs/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="邹怡婷">
@@ -1201,252 +1191,7 @@ $ vue list 查看可以用哪些模板
             
               
                 
-                <a class="post-title-link" href="/2017/04/09/createElement与createDocumentFragment的区别/" itemprop="url">
-                  createElement与createDocumentFragment的区别
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-09T18:35:47+08:00">
-                2017-04-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>#createElement：创建一个新的节点</p>
-<p>createDocumentFragment：创建一个文档片段。</p>
-<p>用createDocumentFragment主要是因为避免因createElement多次添加到document.body引起的效率问题</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/09/阻止冒泡，默认事件/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="邹怡婷">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zoū">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/09/阻止冒泡，默认事件/" itemprop="url">
-                  阻止冒泡，默认事件
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-09T18:35:06+08:00">
-                2017-04-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>JS停止冒泡<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function myfn(e)&#123;</div><div class="line">  window.event?window.event.cancelBubble = true : e.stopPropagation();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>JS阻止默认行为<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function myfn(e)&#123;</div><div class="line">  window.event?window.event.returnValue = false : e.preventDefault();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/09/Nodejs/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="邹怡婷">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zoū">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/09/Nodejs/" itemprop="url">
+                <a class="post-title-link" href="/2017/04/10/Nodejs/" itemprop="url">
                   Node.js
                 </a>
               
@@ -1463,8 +1208,8 @@ $ vue list 查看可以用哪些模板
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-09T18:34:49+08:00">
-                2017-04-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-10T22:48:48+08:00">
+                2017-04-10
               </time>
             
 
@@ -1576,6 +1321,258 @@ $ vue list 查看可以用哪些模板
 <p>其实，Module.exports才是真正的接口，exports只不过是它的一个辅助工具。　最终返回给调用的是Module.exports而不是exports。</p>
 <p>所有的exports收集到的属性和方法，都赋值给了Module.exports。当然，这有个前提，就是Module.exports本身不具备任何属性和方法。<br>如果你想你的模块是一个特定的类型就用Module.exports。如果你想的模块是一个典型的“实例化对象”就用exports。<br>前面已经提到module.exports是真正的接口，exports只不过是它的辅助工具。推荐使用exports导出，除非你打算从原来的“实例化对象”改变成一个类型。</p>
 
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/10/input 实时监听/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="邹怡婷">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zoū">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/10/input 实时监听/" itemprop="url">
+                  input 实时监听
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-10T22:48:48+08:00">
+                2017-04-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="http://www.cnblogs.com/zijian6/p/5767026.html" target="_blank" rel="external">Jquery实时监听input value</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;title&gt;Document&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body id=&quot;lia-body&quot;&gt;</div><div class="line">    &lt;div class=&quot;lia-content&quot;&gt;</div><div class="line">        &lt;div class=&quot;inputwrapper&quot;&gt;</div><div class="line">            &lt;label&gt;&lt;span&gt;姓名：&lt;/span&gt;&lt;input type=&quot;text&quot; name=&quot;fullname&quot;&gt;&lt;/label&gt;</div><div class="line">            &lt;div class=&quot;result&quot;&gt;&lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;script src=&quot;http://apps.bdimg.com/libs/jquery/1.11.3/jquery.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">        $(function()&#123;</div><div class="line">            var $inputwrapper = $(&apos;#lia-body .lia-content .inputwrapper&apos;);</div><div class="line">            $inputwrapper.find(&apos;input&apos;).on(&apos;input propertychange&apos;,function()&#123;</div><div class="line">                var result = $(this).val();</div><div class="line">                console.log(result);</div><div class="line">                $inputwrapper.find(&apos;.result&apos;).html(result);</div><div class="line">            &#125;);</div><div class="line">        &#125;)</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<p>onchange触发事件必须满足两个条件：1）当前对象属性改变，并且是由键盘或鼠标事件激发的（脚本触发无效）2）当前对象失去焦点(onblur)；onpropertychange<br>只要当前对象属性发生改变，都会触发事件，但是它是IE专属的；<br>oninput是onpropertychange的非IE版本，支持firefox和opera等浏览器<br>但不同的是，它绑定于对象时，并非该对象所有属性改变都能触发事件，只有在对象的value值发生改变时才会生效。<br>这里我们用来监听input value的改变再好不过了。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/10/git/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="邹怡婷">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zoū">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/10/git/" itemprop="url">
+                  git
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-10T22:48:48+08:00">
+                2017-04-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="想要向GitHub推送："><a href="#想要向GitHub推送：" class="headerlink" title="想要向GitHub推送："></a>想要向GitHub推送：</h3><h6 id="由于本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以，需要一点设置："><a href="#由于本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以，需要一点设置：" class="headerlink" title="由于本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以，需要一点设置："></a>由于本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以，需要一点设置：</h6><pre><code>1. 查看是否已经有了ssh密钥：cd ~/.ssh
+   如果没有密钥则不会有此文件夹，有则备份删除
+2. 生存密钥：
+   $ ssh-keygen -t rsa -C “haiyan.xu.vip@gmail.com”
+  按3个回车，密码为空。
+3. 登陆GitHub，打开“Account settings”，“SSH Keys”页面：
+   然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容：
+</code></pre><h5 id="本地新建的文件提交到github中："><a href="#本地新建的文件提交到github中：" class="headerlink" title="本地新建的文件提交到github中："></a>本地新建的文件提交到github中：</h5><pre><code>1.$ git add &quot;style.css&quot;
+2.$ git commit -m &quot;add cssText&quot;
+3.$ git push
+</code></pre>
           
         
       

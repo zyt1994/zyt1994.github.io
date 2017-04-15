@@ -247,7 +247,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/09/git/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/10/createElement与createDocumentFragment的区别/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="邹怡婷">
@@ -269,8 +269,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/09/git/" itemprop="url">
-                  git
+                <a class="post-title-link" href="/2017/04/10/createElement与createDocumentFragment的区别/" itemprop="url">
+                  createElement与createDocumentFragment的区别
                 </a>
               
             
@@ -286,8 +286,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-09T18:34:22+08:00">
-                2017-04-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-10T22:48:48+08:00">
+                2017-04-10
               </time>
             
 
@@ -324,17 +324,10 @@
       
         
           
-            <h3 id="想要向GitHub推送："><a href="#想要向GitHub推送：" class="headerlink" title="想要向GitHub推送："></a>想要向GitHub推送：</h3><h6 id="由于本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以，需要一点设置："><a href="#由于本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以，需要一点设置：" class="headerlink" title="由于本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以，需要一点设置："></a>由于本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以，需要一点设置：</h6><pre><code>1. 查看是否已经有了ssh密钥：cd ~/.ssh
-   如果没有密钥则不会有此文件夹，有则备份删除
-2. 生存密钥：
-   $ ssh-keygen -t rsa -C “haiyan.xu.vip@gmail.com”
-  按3个回车，密码为空。
-3. 登陆GitHub，打开“Account settings”，“SSH Keys”页面：
-   然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容：
-</code></pre><h5 id="本地新建的文件提交到github中："><a href="#本地新建的文件提交到github中：" class="headerlink" title="本地新建的文件提交到github中："></a>本地新建的文件提交到github中：</h5><pre><code>1.$ git add &quot;style.css&quot;
-2.$ git commit -m &quot;add cssText&quot;
-3.$ git push
-</code></pre>
+            <p>#createElement：创建一个新的节点</p>
+<p>createDocumentFragment：创建一个文档片段。</p>
+<p>用createDocumentFragment主要是因为避免因createElement多次添加到document.body引起的效率问题</p>
+
           
         
       
@@ -377,7 +370,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/09/让未知大小的盒子居中/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/10/cookie/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="邹怡婷">
@@ -399,8 +392,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/09/让未知大小的盒子居中/" itemprop="url">
-                  让未知大小的盒子居中
+                <a class="post-title-link" href="/2017/04/10/cookie/" itemprop="url">
+                  cookie
                 </a>
               
             
@@ -416,8 +409,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-09T16:50:48+08:00">
-                2017-04-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-10T22:48:48+08:00">
+                2017-04-10
               </time>
             
 
@@ -454,10 +447,20 @@
       
         
           
-            <h5 id="方法1："><a href="#方法1：" class="headerlink" title="方法1："></a>方法1：</h5><p>css：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">#box1 &#123;            </div><div class="line">    position: relative;            </div><div class="line">    width: 600px;</div><div class="line">    height: 600px;</div><div class="line">    background: pink;</div><div class="line">&#125;</div><div class="line">#box2 &#123;</div><div class="line">    position: absolute;</div><div class="line">    width: 300px;</div><div class="line">    height: 300px;</div><div class="line">    background: yellowgreen;</div><div class="line">    top: 0;</div><div class="line">    left: 0;</div><div class="line">    bottom: 0;</div><div class="line">    right: 0;</div><div class="line">    margin: auto;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>html:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">&lt;div id=&quot;box1&quot;&gt;</div><div class="line">    &lt;div id=&quot;box2&quot;&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure>
-<h5 id="方法2："><a href="#方法2：" class="headerlink" title="方法2："></a>方法2：</h5><p>使用CSS3属性<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">#box2 &#123;</div><div class="line">     position: absolute;</div><div class="line">     width: 300px;</div><div class="line">     height: 300px;</div><div class="line">     background: yellowgreen;</div><div class="line">     top: 50%;</div><div class="line">     left: 50%;</div><div class="line">     transform: translate(-50% -50%);</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+            <p>存储数据，当用户访问了网站（网页）的时候，我们就可以通过cookie来向访问者电脑里存储数据（相对来说容量小一点——4kb）,一般用来存储一些用户的信息和简单的数据。</p>
+<h5 id="cookie特点："><a href="#cookie特点：" class="headerlink" title="cookie特点："></a>cookie特点：</h5><pre><code>1. 不同的浏览器存放的cookie位置不一样，也是不能通用的。
+2. cookie的存储是以域名的形式来区分的。
+3. cookie的数据可以设置名字。
+4. 一个域名下所存放的cookie的个数也是有限制的。（不同浏览器存放的个数不同）
+5. 每一个cookie存放的内容大小也是有限制的（根据浏览器不同而不同）一般情况下4KB。
+</code></pre><h5 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h5><pre><code>1. cookie是浏览器提供的一种机制，它是将document对象的cookie属性提供给JavaScript，
+   然后由js来进行控制，而并不是js本身的性质。
+2. cookie存在于用户硬盘的一个文件，这个文件对应 一个域名，当浏览器再次访问这个域名时，
+   便使这个cookie可用，因此cookie可以跨越一个域名下的多个网页，但是不能跨越的多个域名使用
+3. 如果要一次存储多个名/值时，可以使用  分号+空格  隔开。
+</code></pre><p>Chrome默认禁止设置本地的cookie（如果直接file://…..的形式打开浏览器的话看不到），webstorm等一些软件默认内置了一个本地服务器（127.0.0.1）这样就可在chrome上查询到设置的cookie。</p>
+<h5 id="用法："><a href="#用法：" class="headerlink" title="用法："></a>用法：</h5><pre><code>document.cookie = &quot;名字=值&quot;
+</code></pre><h5 id="例："><a href="#例：" class="headerlink" title="例："></a>例：</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function setCooie(key,value,time)&#123;   //time   过期时间</div><div class="line">    var newDate = new Date();</div><div class="line">    newDate.setDate(newDate.getDate()+time);</div><div class="line">    document.cookie = key+<span class="string">"="</span>+encodeURI(value)+<span class="string">";expires="</span>+newDate.toGMTString()</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
           
         
